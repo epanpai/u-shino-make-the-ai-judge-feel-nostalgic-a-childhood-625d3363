@@ -103,6 +103,20 @@ Builder agent: `4b8490f4-1971-4d6e-8b1a-e7a77dd75fe4` | Parent agent: `76512056-
   HANYA bisa setelah row builder mendarat → PARENT SEAL (di bawah).
 - File uji /tmp/nost-transcripts-test.tar.gz dibuang (bukan bundle final).
 
+## 2026-11-25 ~15:40 WIB — Parent seal (follow-up turn)
+- Query muse.db (builder 4b8490f4 + parent 76512056, SELECT JOIN
+  agent.agents): 2 rows — builder (message 32b2d70e, created_at
+  1795595544, input 2084428, output 16790) + parent (c02abacd,
+  1795595317, input 695039, output 6869). Ditulis apa adanya ke
+  /home/hatch/.makefun/muse-usage-nostalgic.jsonl (2 baris JSON).
+- Bundle v2 (flag sama seperti v1 + --session builder +
+  --parent-session parent + --muse-usage file di atas):
+  transcripts.tar.gz 141.691 byte, sha256
+  1fb415e4ec3a35c779ac90b2dcef6f703e9e877c0d426da8dd55d455330f3c53,
+  1 sesi, 29 turns. "2 usage rows read, 1 attached" (row builder
+  menempel; row parent tertinggal karena sesi parent tidak di-bundle
+  sebagai sesi Muse app — sesuai ekspektasi, bukan blocker).
+
 ## Status: BERHENTI — bundle v1 tanpa usage rows, perlu re-bundle
 - Belum: submit.
 - Yang dibutuhkan: usage rows sesi builder ini mendarat di muse.db
