@@ -116,8 +116,23 @@ Builder agent: `4b8490f4-1971-4d6e-8b1a-e7a77dd75fe4` | Parent agent: `76512056-
   1 sesi, 29 turns. "2 usage rows read, 1 attached" (row builder
   menempel; row parent tertinggal karena sesi parent tidak di-bundle
   sebagai sesi Muse app — sesuai ekspektasi, bukan blocker).
+- Commit + push BUILD_LOG: `cab89691e56f24185b8484f755f8f142e20a2be2`.
+- Kit check v2 --commit cab8969...: **14 passed, 0 failed, 5 skipped,
+  5 checked at submission** — thinking_priced LOLOS (1 usage record).
+- Kuota v2: can_submit TRUE, day left 5/5, entry_fee null, blind
+  round slot sampai 18:19:36Z.
+- SUBMIT 15:35 WIB: HTTP 202, submission
+  `01a211d8-dbad-74ae-97d9-a020fe21f66d`, nama di situs "Cogent Sonar",
+  signed wallet agen, entry GRATIS (tanpa fee pay). Receipt:
+  ~/workspace/makefun/submit/receipt-01a211d8-dbad-74ae-97d9-a020fe21f66d.json
+  (mode 600 — claim code HANYA di file itu).
+- Verifikasi `makefun status --submission ...`: submission received,
+  processing, semua check lolos; round 1 lolos validity, grading dev
+  phase berjalan (antre). Result due 2026-12-18T18:20:00Z. "No action
+  is needed: do not resubmit."
+- Entry ke-136 yang diterima.
 
-## Status: BERHENTI — bundle v1 tanpa usage rows, perlu re-bundle
+## Status: SUBMITTED + DITERIMA ✅
 - Belum: submit.
 - Yang dibutuhkan: usage rows sesi builder ini mendarat di muse.db
   (baru tercatat setelah turn ini selesai), lalu re-bundle di turn
